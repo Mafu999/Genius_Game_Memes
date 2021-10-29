@@ -67,3 +67,16 @@ let createColorElement = (color) => {
         return yellow
     }
 }
+
+let nextLevel = () => {
+    score ++;
+    randomOrder();
+}
+
+let gameOver = () =>{
+    alert(`Pontuação: ${score}\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo.`);
+    order: [];
+    clickedOrder = [];
+
+    playGame()
+}
