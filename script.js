@@ -13,11 +13,11 @@ const red = document.querySelector('.red');
 const yellow = document.querySelector('.yellow');
 
 let randomOrder = ()=>{
-    let sequence = Math.round(Math.random() * 4);
-    order = sequence;
+    let sequence = Math.floor(Math.random() * 4);
+    order[order.length] = sequence;
     clickedOrder = [];
 
-    for(let i = 0; i < order.length; i++){
+    for(let i in order){
         let elementColor = createColorElement(order[i]);
         lightColor(elementColor, Number(i) + 1);
     }
@@ -30,7 +30,7 @@ let lightColor = (element, number) => {
     }, number - 250);
     setTimeout(() => {
         element.classList.remove('selected');
-    }, number - 250);
+    });
 }
 
 let checkingOrder = () =>{
@@ -93,6 +93,7 @@ blue.onclick = () => click(1);
 red.onclick = () => click(2);
 yellow.onclick = () => click(3);
 
+console.log(click(0));
 
 
 
