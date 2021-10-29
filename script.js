@@ -80,3 +80,20 @@ let gameOver = () =>{
 
     playGame()
 }
+
+let playGame = () =>{
+    alert('Bem vindo ao Genius Memes! Inicie o jogo.');
+    score = 0;
+
+    nextLevel();
+}
+
+green.onclick = () => click(0);
+blue.onclick = () => click(1);
+red.onclick = () => click(2);
+yellow.onclick = () => click(3);
+
+
+
+
+playGame()
